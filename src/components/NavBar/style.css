@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ul {
   padding: 0;
   margin: 1.5rem;
@@ -61,48 +60,3 @@ a.secondary:before {
 a.tertiary:before {
   background-color: var(--color-tertiary);
 }
-=======
-
-ul {
-    clear: both;
-    float: left;
-    width: 100%;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-ul li {
-    float: left;
-}
-
-ul li a {
-    padding: 2em;
-    display: block;
-    text-decoration: none;
-    color: var(--text-color-light);
-    font-weight: bold;
-}
-ul li a:hover {
-    color: var(--text-color);
-    transform: scale(1.1);
-}
-
-ul li a:hover:before {
-    visibility: visible;
-    transform: scaleX(1);
-}
-
-ul li a:before {
-     content: "";
-     position: absolute;
-     width: 50%;
-     height: 2px;
-     bottom: 0;
-     left: 25%;
-     background: var(--color-primary);
-     visibility: hidden;
-     transform: scaleX(0);
-     transition: all 0.3s ease-in-out 0s;
- }
->>>>>>> origin/master

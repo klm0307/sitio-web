@@ -1,6 +1,5 @@
 import React from "react";
-<<<<<<< HEAD
-import {  BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import "./style.css";
 
 const sections = [
@@ -17,7 +16,9 @@ function NavBar() {
           {sections.map((section) => {
             return (
               <li key={section.text}>
-                <a href={section.link} className={section.color}>{section.text}</a>
+                <a href={section.link} className={section.color}>
+                  {section.text}
+                </a>
               </li>
             );
           })}
@@ -28,21 +29,3 @@ function NavBar() {
 }
 
 export { NavBar };
-=======
-import './style.css'
-
-
-function NavBar(){
-    return (
-          <nav >
-              <ul>
-                  <li><a href="#" title="Enlace genérico">Incio</a></li>
-                  <li><a href="#" title="Enlace genérico">Usuario</a></li>
-                  <li><a href="#" title="Enlace genérico">Preguntas</a></li>
-              </ul>
-          </nav>
-    )
-}
-
-export {NavBar}
->>>>>>> origin/master
