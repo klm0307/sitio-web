@@ -1,0 +1,10 @@
+.card-image {
+  width: 17rem;
+  height: 13.5rem;
+  background: #f5f5f8;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,36 @@
+.list-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1rem 1rem;
+  grid-template-areas: ". . .";
+  overflow-y: auto;
+  height: 85vh;
+}
+
+@media (min-width: 678px) and (max-width: 1067px) {
+  .list-card {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      ". ."
+      ". .";
+  }
+}
+
+@media (max-width: 678px) {
+  .list-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "."
+      "."
+      ".";
+    height: 70vh;
+  }
+}
+
+.title-container {
+  text-align: center;
+  color: var(--color-primary);
+}

@@ -3,21 +3,17 @@ ul {
   margin: 1.5rem;
   list-style: none;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 a {
   text-align: center;
   margin: 0.5rem;
-  padding: 1rem;
+  padding: 0.5rem;
   display: block;
   text-decoration: none;
   color: var(--text-color-light);
   font-weight: bold;
-}
-
-a:hover {
-  transform: scale(1.1);
 }
 
 a.primary:hover {
@@ -32,31 +28,40 @@ a.tertiary:hover {
   color: var(--color-tertiary);
 }
 
-a:hover:before {
-  visibility: visible;
+a.primary:after {
+  display: block;
+  margin: 0.5rem;
+  content: "";
+  border-bottom: solid 3px var(--color-primary);
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+a.secondary:after {
+  display: block;
+  margin: 0.5rem;
+  content: "";
+  border-bottom: solid 3px var(--color-secondary);
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+a.tertiary:after {
+  display: block;
+  margin: 0.5rem;
+  content: "";
+  border-bottom: solid 3px var(--color-tertiary);
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+a:hover:after {
   transform: scaleX(1);
 }
 
-a:before {
-  content: "";
-  position: absolute;
-  width: 50%;
-  height: 2px;
-  bottom: 0;
-  left: 25%;
-  background: var(--color-primary);
-  transform: scaleX(0);
-  transition: all 0.5s ease-in-out 0s;
+a.primary.active {
+  color: var(--color-primary);
 }
-
-a.primary:before {
-  background: var(--color-primary);
+a.secondary.active {
+  color: var(--color-secondary);
 }
-
-a.secondary:before {
-  background-color: var(--color-secondary);
-}
-
-a.tertiary:before {
-  background-color: var(--color-tertiary);
+a.tertiary.active {
+  color: var(--color-tertiary);
 }

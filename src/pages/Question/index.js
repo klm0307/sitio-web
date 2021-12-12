@@ -1,7 +1,8 @@
 import React from "react";
+import { QuestionContainer } from "./container/QuestionContainer";
 
-function Question() {
-  return <p>Question</p>;
-}
+const Question = () => {
+  return <QuestionContainer />;
+};
 
 export default Question;

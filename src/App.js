@@ -3,21 +3,26 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { NavBar } from "../src/components/NavBar";
 
-import { Home } from "./pages/Home";
-import Question from "./pages/Question";
-import User from "./pages/User";
+import { Loading } from "./components/Loading";
+
+const Home = React.lazy(() => import("./pages/Home"));
+const User = React.lazy(() => import("./pages/User"));
+const Question = React.lazy(() => import("./pages/Question"));
+
 function App() {
   return (
-    <>
-      <NavBar></NavBar>
+    <React.Suspense fallback={<Loading />}>
       <Router>
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/user" element={<User />} />
-          <Route path="/question" element={<Question />} />
-        </Routes>
+        <NavBar></NavBar>
+        <main>
+          <Routes>
+            <Route path="/home" element={<Home />} />
+            <Route path="/user" element={<User />} />
+            <Route path="/question" element={<Question />} />
+          </Routes>
+        </main>
       </Router>
-    </>
+    </React.Suspense>
   );
 }
 

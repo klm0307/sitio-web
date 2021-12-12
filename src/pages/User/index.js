@@ -1,7 +1,9 @@
 import React from "react";
+import { UserContainer } from "./container/UserContainer";
+import "./style.css";
 
-function User() {
-  return <p>User</p>;
-}
+const User = () => {
+  return <UserContainer />;
+};
 
 export default User;

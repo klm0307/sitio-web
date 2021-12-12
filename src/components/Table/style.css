@@ -1,0 +1,64 @@
+table {
+  border-collapse: collapse;
+  width: 80%;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  opacity: 1;
+  animation: fadeIn 1s linear;
+}
+
+thead,
+tbody {
+  display: block;
+  width: 100%;
+}
+
+table,
+td {
+  border-collapse: collapse;
+}
+
+thead {
+  display: table;
+  width: 100%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+tbody {
+  display: block;
+  height: 50vh;
+  overflow-y: scroll;
+}
+
+th,
+td {
+  width: 25%;
+  word-break: break-all;
+}
+
+tr {
+  display: table;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+td {
+  text-align: center;
+  border-bottom: none;
+  border-left: none;
+}
+
+th {
+  font-size: var(--lg);
+  height: 40px;
+  background-color: var(--color-secondary);
+  color: var(--white);
+}
+
+th:first-child {
+  border-top-left-radius: 0.5rem;
+}
+th:last-child {
+  border-top-right-radius: 0.5rem;
+}

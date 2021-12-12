@@ -4,7 +4,7 @@
   --very-light-grey: #f5f5f8;
   --text-color: #b4b6ba;
   --text-color-light: #c7c7c7;
-  --color-primary: #eaa7c7;
+  --color-primary: #ff9eaf;
   --color-secondary: #ffc73f;
   --color-tertiary: #e6a5e1;
   --sm: 14px;
@@ -13,9 +13,40 @@
 }
 
 body {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Comfortaa", sans-serif;
   font-size: var(--md);
   margin: 0;
   padding: 0;
   width: 100%;
+  overflow: hidden;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  opacity: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 1rem;
+  background: transparent;
+}
+::-webkit-scrollbar:hover {
+  opacity: 1;
+}
+:hover::-webkit-scrollbar-thumb {
+  border-radius: 1rem !important;
+  background-color: #65717c !important;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

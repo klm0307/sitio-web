@@ -1,0 +1,7 @@
+.card-title {
+  font-size: var(--lg);
+  font-weight: bold;
+  color: var(--white);
+  text-align: justify;
+  margin: 0 1rem 0 1rem;
+}

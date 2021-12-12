@@ -1,8 +1,22 @@
 import React from "react";
-import {CardContainer} from "../CardContainer";
+import { listItems } from "../../services/homeService";
+import { CardContainer } from "../CardContainer";
+import "./style.css";
 
-const bio = [{title:'',image:'',text:''},{title:'',image:'',text:''},{title:'',image:'',text:''}]
-const HomeContainer=()=> {
-    return <CardContainer/>;
-}
+const HomeContainer = () => {
+  const items = listItems();
+
+  return (
+    <section>
+      <div className="title-container">
+        <h1>Autobiografia</h1>
+      </div>
+      <div className="list-card">
+        {items.map((item, index) => {
+          return <CardContainer key={index} item={item} />;
+        })}
+      </div>
+    </section>
+  );
+};
 export { HomeContainer };

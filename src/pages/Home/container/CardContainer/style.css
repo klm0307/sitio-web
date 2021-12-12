@@ -1,41 +1,58 @@
-.card-container{
-    width: 25rem;
-    height: 32rem;
-    background: linear-gradient(180deg, var(--color-primary) 50%, var(--white) 50%);
-    border: 1px solid #AAAAAA;
-    box-sizing: border-box;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 2rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: .3fr 1fr .7fr;
-    grid-auto-flow: row;
-    justify-content: center;
-    align-items: center;
-    grid-template-areas:
+.card-container {
+  width: 20rem;
+  height: 30rem;
+  box-sizing: border-box;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 1fr 0.7fr;
+  grid-auto-flow: row;
+  justify-content: center;
+  align-items: center;
+  grid-template-areas:
     "title"
     "image"
     "text";
+  margin: 0 0.5rem 0 0.5rem;
+  animation: fadeIn 1s linear;
 }
 
+.primary-background-gradient {
+  background: linear-gradient(
+    180deg,
+    var(--color-primary) 40%,
+    var(--white) 40%
+  );
+}
+
+.secondary-background-gradient {
+  background: linear-gradient(
+    180deg,
+    var(--color-secondary) 40%,
+    var(--white) 40%
+  );
+}
+
+.tertiary-background-gradient {
+  background: linear-gradient(
+    180deg,
+    var(--color-tertiary) 40%,
+    var(--white) 40%
+  );
+}
 
 .title {
-
-    justify-self: center;
-    grid-area: title;
+  justify-self: center;
+  grid-area: title;
 }
 
 .image {
-
-    justify-self: center;
-    grid-area: image;
+  justify-self: center;
+  grid-area: image;
 }
 
 .text {
-
-    justify-self: center;
-    grid-area: text;
+  justify-self: center;
+  grid-area: text;
 }
-
-
-

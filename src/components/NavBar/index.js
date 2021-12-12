@@ -1,30 +1,33 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./style.css";
 
 const sections = [
-  { text: "Inicio", link: "/home", color: "primary" },
-  { text: "Usuario", link: "/user", color: "secondary" },
-  { text: "Preguntas", link: "/question", color: "tertiary" },
+  { text: "Inicio", component: "/home", color: "primary" },
+  { text: "Usuario", component: "/user", color: "secondary" },
+  { text: "Preguntas", component: "/question", color: "tertiary" },
 ];
 
 function NavBar() {
   return (
-    <Router>
-      <nav>
-        <ul>
-          {sections.map((section) => {
-            return (
-              <li key={section.text}>
-                <a href={section.link} className={section.color}>
-                  {section.text}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
-      </nav>
-    </Router>
+    <nav>
+      <ul>
+        {sections.map((section) => {
+          return (
+            <li key={section.text}>
+              <NavLink
+                to={section.component}
+                className={({ isActive }) =>
+                  isActive ? section.color + " active" : section.color
+                }
+              >
+                {section.text}
+              </NavLink>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
   );
 }
 
