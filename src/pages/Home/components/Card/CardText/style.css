@@ -1,7 +1,6 @@
 .card-text {
   color: var(--text-color);
   font-size: var(--sm);
-  font-weight: bold;
   text-align: justify;
   margin: 0 1rem 0.5rem 1rem;
 }
