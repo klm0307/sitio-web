@@ -1,9 +1,7 @@
 import React from "react";
 import { CardContainer } from "../CardContainer";
-import { listQuestions } from "../../services/questionService";
-import "./style.css";
 
-const questions = listQuestions();
+import "./style.css";
 
 const QuestionContainer = () => {
   return (
@@ -11,7 +9,7 @@ const QuestionContainer = () => {
       <div className="title-container-question">
         <h1>Preguntas</h1>
       </div>
-      <CardContainer questions={questions} />
+      <CardContainer />
     </section>
   );
 };
