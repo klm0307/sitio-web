@@ -1,12 +1,3 @@
-section {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-}
-
 .title-container-user {
   display: flex;
   width: 80%;
