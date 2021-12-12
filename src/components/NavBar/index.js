@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import "./style.css";
 
 const sections = [
-  { text: "Inicio", component: "/home", color: "primary" },
+  { text: "Inicio", component: "/", color: "primary" },
   { text: "Usuario", component: "/user", color: "secondary" },
   { text: "Preguntas", component: "/question", color: "tertiary" },
 ];

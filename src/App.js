@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 import "./App.css";
 import { NavBar } from "../src/components/NavBar";
 
@@ -16,7 +21,7 @@ function App() {
         <NavBar></NavBar>
         <main>
           <Routes>
-            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/user" element={<User />} />
             <Route path="/question" element={<Question />} />
           </Routes>
