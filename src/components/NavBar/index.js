@@ -11,7 +11,7 @@ const sections = [
 function NavBar() {
   return (
     <nav>
-      <ul>
+      <ul className="list-restyled">
         {sections.map((section) => {
           return (
             <li key={section.text}>

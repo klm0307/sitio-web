@@ -23,24 +23,29 @@
 @media (max-width: 1067px) {
   .list-card-question {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-      "image-question"
-      "question";
+    grid-template-rows: 1fr;
+    grid-template-areas: "question";
     height: 70vh;
-
     padding: 0.5rem;
   }
 
   .image-question-container {
     width: 200px;
   }
+  .image-question {
+    display: none;
+  }
+
+  .text-question {
+    max-height: 50vh;
+    overflow-y: auto;
+  }
 }
 
 .question {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 15% 70% 15%;
+  grid-template-rows: 20% auto 10%;
   gap: 0.2rem 0.2rem;
   grid-auto-flow: row;
   grid-template-areas:
@@ -59,10 +64,14 @@
 }
 
 .text-question {
+  overflow-y: auto;
+  max-height: 40vh;
+
   grid-area: text-question;
 }
 
 .title-question {
+  align-self: center;
   grid-area: title-question;
 }
 

@@ -1,4 +1,5 @@
 .card-question-text {
+  margin: 0.5rem 1rem;
   color: var(--text-color);
   text-align: justify;
 }

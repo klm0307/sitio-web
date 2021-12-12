@@ -36,6 +36,7 @@ th,
 td {
   width: 25%;
   word-break: break-all;
+  color: var(--text-color);
 }
 
 tr {

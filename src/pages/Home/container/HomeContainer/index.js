@@ -9,7 +9,7 @@ const HomeContainer = () => {
   return (
     <section>
       <div className="title-container">
-        <h1>Autobiografia</h1>
+        <h1>Autobiografía</h1>
       </div>
       <div className="list-card">
         {items.map((item, index) => {

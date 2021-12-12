@@ -17,7 +17,7 @@ const Pagination = ({
     return i;
   };
   return (
-    <ul className="pagination">
+    <ul className="pagination list-restyled">
       <li>
         <button
           disabled={page === 1}
