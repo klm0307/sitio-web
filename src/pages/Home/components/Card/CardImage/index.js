@@ -4,7 +4,7 @@ import "./style.css";
 const CardImage = ({ image }) => {
   return (
     <div className="card-image">
-      <img src={image} width={220} alt="imagen" />
+      <img src={image} width={180} alt="imagen" />
     </div>
   );
 };

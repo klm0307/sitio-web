@@ -4,6 +4,7 @@ import { CardQuestionText } from "../../components/Card/CardQuestionText";
 import { CardQuestionImage } from "../../components/Card/CardQuestionImg";
 import { listQuestions } from "../../services/questionService";
 import "./style.css";
+import { Pagination } from "../../../../components/Pagination";
 
 const CardContainer = () => {
   const questions = listQuestions();
@@ -11,6 +12,18 @@ const CardContainer = () => {
 
   const setQuestion = (index) => {
     setQuestionSelected(questions[index]);
+  };
+
+  const previosQuestion = () => {
+    setQuestion(questionSelected.id - 2);
+  };
+
+  const navigateQuestion = (page) => {
+    setQuestion(page - 1);
+  };
+
+  const nextQuestion = () => {
+    setQuestion(questionSelected.id);
   };
 
   return (
@@ -27,22 +40,14 @@ const CardContainer = () => {
             <CardQuestionText text={questionSelected.text} />
           </div>
           <div className="navigate">
-            <ul className="navigate-question">
-              {questions.map((question, index) => {
-                return (
-                  <li key={index}>
-                    <button
-                      className={
-                        questionSelected.id === question.id
-                          ? "active-question"
-                          : ""
-                      }
-                      onClick={() => setQuestion(index)}
-                    ></button>
-                  </li>
-                );
-              })}
-            </ul>
+            <Pagination
+              previosPage={previosQuestion}
+              nextPage={nextQuestion}
+              navigatePage={navigateQuestion}
+              totalPages={questions.length}
+              page={questionSelected.id}
+              variant={"tertiary"}
+            />
           </div>
         </div>
       </div>

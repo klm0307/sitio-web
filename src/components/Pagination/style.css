@@ -1,6 +1,7 @@
 .pagination {
   display: flex;
   justify-content: center;
+  margin: 0.5rem;
 }
 
 .pagination-first {
@@ -34,7 +35,17 @@
   font-weight: bold;
 }
 
-.pagination-active {
+.pagination-active.primary {
+  color: var(--white);
+  background-color: var(--color-primary);
+}
+
+.pagination-active.secondary {
   color: var(--white);
   background-color: var(--color-secondary);
+}
+
+.pagination-active.tertiary {
+  color: var(--white);
+  background-color: var(--color-tertiary);
 }

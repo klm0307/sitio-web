@@ -8,7 +8,7 @@ const UserContainer = () => {
     { name: "Avatar" },
     { name: "Nombre" },
     { name: "Apellido" },
-    { name: "Email" },
+    { name: "Email", mobileHide: true },
   ];
 
   const [users, setUsers] = useState([]);
@@ -47,6 +47,7 @@ const UserContainer = () => {
         navigatePage={navigatePage}
         totalPages={totalPages}
         page={page}
+        variant={"secondary"}
       />
     </section>
   );

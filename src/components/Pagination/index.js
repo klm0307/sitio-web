@@ -7,6 +7,7 @@ const Pagination = ({
   nextPage,
   totalPages,
   page,
+  variant,
 }) => {
   const range = () => {
     const i = [];
@@ -32,7 +33,7 @@ const Pagination = ({
             <button
               className={`pagination-element ${
                 range === page ? "pagination-active" : ""
-              }`}
+              } ${variant}`}
               onClick={() => navigatePage(range)}
             >
               {range}

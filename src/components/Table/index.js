@@ -7,7 +7,11 @@ const Table = ({ data, fields }) => {
       <thead>
         <tr>
           {fields.map((field, index) => {
-            return <th key={index}>{field.name}</th>;
+            return (
+              <th key={index} className={field.mobileHide ? "mobile-hide" : ""}>
+                {field.name}
+              </th>
+            );
           })}
         </tr>
       </thead>
@@ -24,7 +28,7 @@ const Table = ({ data, fields }) => {
               </td>
               <td>{item.first_name}</td>
               <td>{item.last_name}</td>
-              <td>{item.email}</td>
+              <td className="mobile-hide">{item.email}</td>
             </tr>
           );
         })}

@@ -29,6 +29,7 @@ tbody {
   display: block;
   height: 50vh;
   overflow-y: scroll;
+  background-color: var(--white);
 }
 
 th,
@@ -61,4 +62,10 @@ th:first-child {
 }
 th:last-child {
   border-top-right-radius: 0.5rem;
+}
+
+@media (max-width: 1067px) {
+  .mobile-hide {
+    display: none;
+  }
 }
